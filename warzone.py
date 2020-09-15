@@ -22,7 +22,7 @@ Wins=soup.find("span",class_="value")
 Wins=Wins.text
 print(Wins)
 
-
+#have to set a variable to the div and span tags for the K/D ratio aspect of the stats
 ratio=soup.find("span",title="K/D Ratio",class_="name").find(class_="value")
 
 
