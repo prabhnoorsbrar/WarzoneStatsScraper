@@ -11,7 +11,7 @@ from discord.utils import get
 #https://cod.tracker.gg/warzone/profile/xbl/NOOR/overview (xbl url)
 #<span data-v-01cb423e="" class="value">2.96</span> (element for kd value)
 
-
+#make variables to create dynamic URL
 stats=requests.get("https://cod.tracker.gg/warzone/profile/psn/noor209/overview")
 print(stats)
 
