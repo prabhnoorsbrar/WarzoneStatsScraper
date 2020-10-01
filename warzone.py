@@ -10,6 +10,24 @@ from discord.utils import get
 #https://cod.tracker.gg/warzone/profile/psn/noor209/overview (psn url)
 #https://cod.tracker.gg/warzone/profile/xbl/NOOR/overview (xbl url)
 #<span data-v-01cb423e="" class="value">2.96</span> (element for kd value)
+client = discord.Client()
+
+@client.event
+async def on_ready():
+    print('We have logged in as {0.user}'.format(client))
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+
+    if message.content.startswith('$hello'):
+        await message.channel.send('Hello!')
+
+#client.run('NzYxMTExNzAyNTY4ODI4OTQ4.X3V2gg.Rcpe7-R0_MU4_IG2KUC5woQjhIE')
+
+
+
 
 #make variables to create dynamic URL
 stats=requests.get("https://cod.tracker.gg/warzone/profile/psn/noor209/overview")
